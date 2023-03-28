@@ -13,14 +13,18 @@
 
         <main>
             <div class="container">
+                <h1 class="text-center m-4 pb-2">Movies</h1>
                 <div class="row">
                     @foreach ($movies as $movie)
                         <div class="col-3">
-                            <div class="card">
+                            <div class="card mb-3">
                                 <div class="card-body">
-                                    <h2>
-                                        {{ $movie->title }}
-                                    </h2>
+                                    <h2>{{ $movie->title }}</h2>
+                                    <span>Nazionaliy: {{ $movie->nationality }}</span>
+                                    <br>
+                                    <span>Date: {{ $movie->date }}</span>
+                                    <br>
+                                    <span>Vote: {{ $movie->vote }}/10</span>
                                 </div>
                             </div>
                         </div>
